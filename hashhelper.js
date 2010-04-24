@@ -1,8 +1,8 @@
 /**
  * @author	Dan Beam <dan@danbeam.org>
  * @internal	A simple class to help those that want to #hash based navigation
- * @param	mixed:delayOrFunc - either an Integer to denote the polling delay (in milliseconds), or an onChange callback
- * @param	mixed:delayOrFunc - a function to be used as the onChange callback
+ * @param	mixed:delayOrFunc - an Integer to denote the polling delay (in milliseconds), or an onChange callback
+ * @param	mixed:delayOrFunc - a Function to be used as the onChange callback
  * @return	an instance of HashHelper (usage:var hh = new HashHelper([...args...]);)
  */
 
@@ -27,7 +27,8 @@ HashHelper.prototype.get = function () {
 /**
  * @internal	Sets the hash, changing the URL without reloading the page 
  * @internal	In some browsers, this also creates a new history element (allowing Back/Forward navigation)
- * @param	The new #hash to be set (in the URL0
+ * @param	String:hash - the new #hash to be set (in the URL)
+ * @param	Function:callback (optional) - a callback to be executed after done setting
  * @return	(self)
  */
 
@@ -55,7 +56,7 @@ HashHelper.prototype.check = function () {
 
 /**
  * @internal	Start polling the #hash part of the location for changes
- * @param	(none)
+ * @param	Function:callback (optional) - a callback to be executed after started
  * @return	(self)
  */
 
@@ -71,7 +72,7 @@ HashHelper.prototype.start = function (callback) {
 
 /**
  * @internal	Stop polling the #hash part of the location for changes
- * @param	(none)
+ * @param	Function:callback (optional) - a callback to be executed after stopping
  * @return	(self)
  */
 
