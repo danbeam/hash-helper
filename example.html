@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+	<body> 
+		<div align="center"><h1 id="changey"></h1></div> 
+		<script src="hashhelper.js"></script> 
+		<script>
+
+			var changey = document.getElementById('changey');
+		
+			new HashHelper(function (h) {
+
+				changey.innerHTML = 'I changed to: ' + h;
+
+			}).start(function () {
+
+				changey.innerHTML = 'I started with: ' + this.get();
+			});
+ 
+		</script> 
+	</body> 
+</html> 
